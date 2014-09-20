@@ -25,6 +25,14 @@ angular.module('OFS', ['ofsServices', 'ofsFilters', 'ofsDirectives', 'ui.bootstr
         cookie     : true,
         version    : 'v2.1'
       });
+  .controller('thanks', function($scope, $http) {
+
+
+  })
+  .controller('kill', function($scope, $http) {
+
+  })
+  .controller('login', function($scope) {
 
       FB.getLoginStatus(function(response) {
         statusChangeCallback(response);
@@ -98,6 +106,26 @@ angular.module('OFS', ['ofsServices', 'ofsFilters', 'ofsDirectives', 'ui.bootstr
           templateUrl: '/static/partials/configure.html',
           controller:'configure'
         })
+	  .when('/', {
+  	  templateUrl: '/static/partials/home.html',
+      controller: 'home'
+	  })
+    .when('/about', {
+      templateUrl: '/static/partials/about.html',
+      controller: 'about'
+              })
+        .when('/kill', {
+                  templateUrl: 'static/partials/kill.html',
+                  controller: 'kill'
+              })
+        .when('/login', {
+                  templateUrl: 'static/partials/login.html',
+                  controller: 'login'
+              })
+        .when('/thanks', {
+                  templateUrl: 'static/partials/post_death.html',
+                  controller: 'thanks'
+              })
 	.otherwise({
 	  redirectTo: '/'
 	});
