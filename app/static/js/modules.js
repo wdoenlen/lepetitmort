@@ -10,6 +10,16 @@ angular.module('OFS', ['ofsServices', 'ofsFilters', 'ofsDirectives', 'ui.bootstr
   .controller('home', function($scope) {
 
   })
+  .controller('thanks', function($scope, $http) {
+
+
+  })
+  .controller('kill', function($scope, $http) {
+
+  })
+  .controller('login', function($scope) {
+
+  })
   .controller('configure', function($scope, $window) {
     $scope.services = [
       {name:'facebook', template:'/static/partials/facebookConfigure.html'},
@@ -25,15 +35,6 @@ angular.module('OFS', ['ofsServices', 'ofsFilters', 'ofsDirectives', 'ui.bootstr
         cookie     : true,
         version    : 'v2.1'
       });
-  .controller('thanks', function($scope, $http) {
-
-
-  })
-  .controller('kill', function($scope, $http) {
-
-  })
-  .controller('login', function($scope) {
-
       FB.getLoginStatus(function(response) {
         statusChangeCallback(response);
       });
