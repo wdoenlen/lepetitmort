@@ -192,6 +192,48 @@ a.communicate, span.communicate {
 /* For Angular-UI Bootstrap */
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
+
+/* Header */
+
+#header {
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+}
+
+#header ul {
+    padding: 10px;
+}
+
+#header a.btn-social {
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#header a.btn-social > i {
+    color: white;
+}
+
+#header .btn-facebook:hover {
+    color: #fff;
+    background-color: #2d4373;
+    border-color: rgba(0,0,0,0.2);
+}
+
+#header .btn-google-plus:hover {
+    color: #fff;
+    background-color: #c23321;
+    border-color: rgba(0,0,0,0.2);
+}
+
+#header .btn-twitter:hover {
+    color: #fff;
+    background-color: #2795e9;
+    border-color: rgba(0,0,0,0.2);
+}
+
 /* Kill page */
 
 #kill-controller {
