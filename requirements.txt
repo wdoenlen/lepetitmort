@@ -1,4 +1,5 @@
 Flask==0.10.1
+Flask-Mobility==0.1.1
 Flask-SQLAlchemy==1.0
 Jinja2==2.7.3
 MarkupSafe==0.23
@@ -7,6 +8,7 @@ Unidecode==0.04.16
 Werkzeug==0.9.6
 argparse==1.2.1
 beautifulsoup4==4.3.2
+gnureadline==6.3.3
 gunicorn==18.0
 ipython==2.1.0
 itsdangerous==0.23
