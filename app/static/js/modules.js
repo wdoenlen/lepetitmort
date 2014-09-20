@@ -1,13 +1,16 @@
 'use strict';
 
 angular.module('OFS', ['ofsServices', 'ofsFilters', 'ofsDirectives', 'ui.bootstrap', 'angular-loading-bar'])
-  .controller('main', function($scope, $http, $location, $window) {
+  .controller('main', function($scope) {
 
   })
   .controller('about', function($scope) {
 
   })
-  .controller('home', function($scope, $http) {
+  .controller('home', function($scope) {
+
+  })
+  .controller('login', function($scope) {
 
   })
   .config([
@@ -21,6 +24,10 @@ angular.module('OFS', ['ofsServices', 'ofsFilters', 'ofsDirectives', 'ui.bootstr
         .when('/about', {
           templateUrl: '/static/partials/about.html',
           controller: 'about'
+        })
+        .when('/login', {
+          templateUrl: '/static/partials/login.html',
+          controller: 'login'
         })
 	.otherwise({
 	  redirectTo: '/'
