@@ -1,33 +1,48 @@
-### SublimeText ###
-*.sublime-workspace
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
 
-### OSX ###
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
 .DS_Store
-.AppleDouble
-.LSOverride
-Icon
-
-# Thumbnails
+.DS_Store?
 ._*
-
-# Files that might appear on external disk
 .Spotlight-V100
 .Trashes
-
-### Windows ###
-# Windows image file caches
-Thumbs.db
+Icon?
 ehthumbs.db
+Thumbs.db
 
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# App specific
-
-node_modules/
-.tmp
-dist
-/src/scripts/main.js
+# My own #
+######################
+*~
+*#*
+venv
+documents
+*.p
+audio
