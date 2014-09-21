@@ -16,11 +16,3 @@ angular.module('deathmsgFilters', [])
       return input.toUpperCase();
     }
   })
-  .filter('title', function() {
-    return function(input) {
-      if (!input) {
-        return '';
-      }
-      return input.split(' ').map(function(x) {return x[0].toUpperCase() + x.slice(1)}).join(' ')
-    }
-  });
