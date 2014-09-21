@@ -72,13 +72,13 @@ def get_selection(phone):
                     key = lambda message: message[1])
     return counts[0]
 
+from_phone="+14158010048"
+ACCOUNT_SID = os.environ['TWILIO_SID']
+AUTH_TOKEN = os.environ['TWILIO_TOKEN']
+twilio_client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
 def send_by_twilio(to_phone, message):
     try:
-        from_phone="+14158010048"
-        ACCOUNT_SID = os.environ['TWILIO_SID']
-        AUTH_TOKEN = os.environ['TWILIO_TOKEN']
-        client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
-        client.messages.create(
+        twilio_client.messages.create(
             to=to_phone,
             from_=from_phone,
             body=message,
