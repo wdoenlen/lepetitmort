@@ -25,5 +25,8 @@ options = [
     {'type':h, 'body':"For you the flag is flung, for you the bugle trills. For you bouquets and ribbon'd wreaths, for you the shores a-crowding."},
     {'type':h, 'body':'So we beat on, boats against the current, borne back ceaselessly into the past.'},
     {'type':h, 'body':"That is part of the beauty of all literature. You discover that your longings are universal longings, that you're not lonely and isolated from anyone. You belong."},
-    {'type':h, 'body':'Let us learn to show our friendship for a man when he is alive and not after he is dead.'}
+    {'type':h, 'body':'Let us learn to show our friendship for a man when he is alive and not after he is dead.'},
+    {'type':h, 'body':'Set your goals high; Make friends with different kinds of people; Enjoy simple pleasures'},
+    {'type':h, 'body':'Stand on high ground; Sit on level ground; Walk on expansive ground.'},
+    {'type':h, 'body':"Still, I'll rise"}
     ]

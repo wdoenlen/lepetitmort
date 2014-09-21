@@ -2,18 +2,23 @@
 A Hint Of Hope
 ==============
 
+Todo:
+6. Cron for sending the message every 1-3 weeks.
+13. More messages
+14. STOP sending functionality
+
+Done:
 1. Single page website with brief message and field for phone number X
 2. Backend receiving phone number and adding to model X
 3. Chooses a message from a pre-populated list X
 4. Twilio message sending X
 5. Set up Postgres DB X
-6. Cron for sending the message every 1-3 weeks.
-7. Deploy on a server
+7. Deploy on a server X
 8. Test that the flow all works. X
 9. Add more messages X
 10. Complete single page css X
 11. Send txt msg intro to people who sign up. X
-12. Mobile X
+12. Mobile Pass X
 
 ================
 One Final Stroke
