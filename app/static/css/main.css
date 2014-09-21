@@ -131,8 +131,8 @@ body {
     text-align: center;
 }
 
-span.label-primary {
-    font-size: 12px;
+span.label {
+    font-size: 15px;
 }
 
 @media (max-width: 480px) {

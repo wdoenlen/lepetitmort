@@ -21,8 +21,7 @@ angular.module('DeathMsg', ['deathmsgServices', 'deathmsgFilters', 'deathmsgDire
         var form = new FormData();
         form.append('phone', phoneNumber);
         Post.postPhone(form).then(function(data) {
-          console.log(data)
-          $scope.setMessage({'msg':data.data.message, 'success':data.data.success})
+          $scope.setMessage(data.data);
         });
       } else {
         $scope.setMessage({'msg':'Please enter a complete phone number', 'success':false});
