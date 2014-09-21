@@ -210,14 +210,14 @@ body {
   overflow: hidden;
 }
 
-.full:after {
-  background-color: rgba(0,0,0,.5);
-}
-
 h1 {
     font-size: 50px;
 }
 
 p {
     font-size: 20px;
+}
+
+.tel-input {
+    width: 38%;
 }
