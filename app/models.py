@@ -3,6 +3,7 @@ from app import utility
 from app import config
 import random
 import os
+from twilio.rest import TwilioRestClient
 import message_options
 
 class Phone(db.Model):
@@ -35,9 +36,12 @@ class Message(db.Model):
 
     def send(self):
         phone = Phone.query.get(self.phone_id)
-        message = message_options.options[self.selection]['body']
-        # send twilio msg to number:phone with body:message
-        pass
+        body = message_options.options[self.selection]['body']
+        send_success = send_by_twilio(phone, body)
+        if send_success:
+            self.sent_time = utility.get_time()
+            db.session.commit()
+
 
 def create_message(phone_id, selection=None, commit=True):
     phone = Phone.query.get(phone_id)
@@ -67,3 +71,19 @@ def get_selection(phone):
     counts = sorted([(index, messages.count(index)) for index,_ in enumerate(options)],
                     key = lambda message: message[1])
     return counts[0]
+
+def send_by_twilio(to_phone, message):
+    try:
+        from_phone="+14158010048"
+        ACCOUNT_SID = os.environ['TWILIO_SID']
+        AUTH_TOKEN = os.environ['TWILIO_TOKEN']
+        client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
+        client.messages.create(
+            to=to_phone,
+            from_=from_phone,
+            body=message,
+            status_callback='/twilio_callback'
+        )
+        return True
+    except:
+        return False
