@@ -46,15 +46,15 @@ input.phone {
 }
 
 .content {
-    height: 650px;
-    padding-top:50px;
-    width: 900px;
+    height: 90%;
+    /*padding-top:50px;*/
+    width: 90%;
     margin: auto;
 }
 
 .content-text {
-    margin-top:25px;
-    height: 605px;
+    /*margin-top:25px;*/
+    height: 80%;
     font-size: 25px;
 }
 
@@ -123,4 +123,16 @@ body {
 .btn-go {
     padding-right: 5px;
     padding-left: 5px;
+}
+
+@media (max-width: 480px) {
+    .tel-input {
+        width: 100%;
+    }
+
+    .byline {
+        font-size: 26px;
+    }
+
+    
 }
