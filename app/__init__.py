@@ -5,7 +5,6 @@ from flask.ext.mobility import Mobility
 from logging import StreamHandler, DEBUG
 import utility
 import config
-import os
 
 basedir = config.basedir
 baseurl = config.baseurl
