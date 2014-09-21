@@ -108,12 +108,13 @@ body {
 }
 
 .full {
-  background: url(../img/lake-compressed.jpg) no-repeat center center fixed;
+  background: url(../img/lake-compressed.jpg) no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   overflow: hidden;
+  min-height: 100%;
 }
 
 .input-group-addon {
@@ -135,7 +136,7 @@ span.label {
     font-size: 15px;
 }
 
-@media (max-width: 480px) {
+@media only screen and (max-device-width: 750px) {
     .tel-input {
         width: 100%;
     }
