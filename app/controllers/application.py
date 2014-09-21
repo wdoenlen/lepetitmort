@@ -25,6 +25,11 @@ def basic_pages():
 def twilio_receiver():
     print request.form['SmsStatus']
 
+@app.flask_app.route('/save-phone', methods=['POST'])
+def save_phone():
+    phone_string = request.form['phone']
+    print phone_string
+
 # @app.flask_app.route('/google34d3fe92d155a2aa.html')
 # def google_verification(**kwargs):
 #     return make_response(open('app/public/template/google34d3fe92d155a2aa.html').read())

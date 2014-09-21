@@ -7,8 +7,33 @@ angular.module('DeathMsg', ['deathmsgServices', 'deathmsgFilters', 'deathmsgDire
   .controller('about', function($scope) {
 
   })
-  .controller('home', function($scope) {
+  .controller('home', function($scope, Post) {
+    $scope.msg = null;
+    $scope.isSuccessMsg = null;
+    $scope.setMessage = function(obj) {
+      $scope.msg = obj.msg;
+      $scope.isSuccessMsg = obj.success;
+    }
 
+    $scope.submitPhone = function() {
+      console.log($scope.phoneNumber);
+      var phoneNumber = $scope.phoneNumber.toString().trim();
+      if (phoneNumber.length == 10) {
+        var form = new FormData();
+        form.append('phone', phoneNumber);
+        Post.postPhone(form).then(function(data) {
+          $scope.setMessage({'msg':data.data.message, 'success':data.data.success})
+        });
+      } else {
+        $scope.setMessage({'msg':'Please enter a complete phone number', 'success':false});
+      }
+    }
+
+    $scope.$watch('phoneNumber', function(newval, oldval) {
+      if ($scope.msg && newval != oldval) {
+        $scope.msg = null;
+      }
+    })
   })
   .config([
     '$routeProvider', '$locationProvider',
