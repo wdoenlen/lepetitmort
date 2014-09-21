@@ -10,9 +10,10 @@ A Hint Of Hope
 6. Cron for sending the message every 1-3 weeks.
 7. Deploy on a server
 8. Test that the flow all works.
-9. Add more messages
-10. Complete single page CSS
+9. Add more messages X
+10. Complete single page css X
 11. Send txt msg intro to people who sign up. X
+12. Mobile X
 
 ================
 One Final Stroke
