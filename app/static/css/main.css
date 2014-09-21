@@ -109,10 +109,10 @@ body {
 
 .full {
   background: url(../img/lake-compressed.jpg) no-repeat;
-  /*-webkit-background-size: cover;*/
-  /*-moz-background-size: cover;*/
-  /*-o-background-size: cover;*/
-  /*background-size: cover;*/
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -146,5 +146,9 @@ span.label {
 
     input.phone {
         font-size: 26px;
+    }
+
+    html {
+        min-height: 100%;
     }
 }
