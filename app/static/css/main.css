@@ -4,7 +4,8 @@ body {
 }
 
 .info {
-    padding-bottom:70px;
+    text-align: center;
+    padding-bottom:20px;
 }
 .topline {
     margin-bottom:25px;
@@ -14,13 +15,19 @@ body {
     font-size:28px;
 }
 
+.tel-input {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 input.phone {
     font-size:40px;
     height:70px;
     text-align:center;
 }
 .phone-icon {
-    font-size:3em;
+    font-size:2em;
     position:relative;
     top:3px;
 }
@@ -105,3 +112,5 @@ body {
   background-size: cover;
   overflow: hidden;
 }
+
+
