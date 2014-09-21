@@ -193,57 +193,18 @@ a.communicate, span.communicate {
 .nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
 
-/* Header */
+/* Home page */
 
-#header {
-    color: #31708f;
-    background-color: #d9edf7;
-    border-color: #bce8f1;
+body {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	background: none;
 }
 
-#header ul {
-    padding: 10px;
-}
-
-#header a.btn-social {
-    color: white;
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#header a.btn-social > i {
-    color: white;
-}
-
-#header .btn-facebook:hover {
-    color: #fff;
-    background-color: #2d4373;
-    border-color: rgba(0,0,0,0.2);
-}
-
-#header .btn-google-plus:hover {
-    color: #fff;
-    background-color: #c23321;
-    border-color: rgba(0,0,0,0.2);
-}
-
-#header .btn-twitter:hover {
-    color: #fff;
-    background-color: #2795e9;
-    border-color: rgba(0,0,0,0.2);
-}
-
-/* Kill page */
-
-#kill-controller {
-    text-align: center;
-}
-
-#kill {
-    font-size: 22px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: 150px;
-
+.full {
+  background: url(http://placehold.it/1920x1080) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

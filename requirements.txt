@@ -10,9 +10,12 @@ argparse==1.2.1
 beautifulsoup4==4.3.2
 gnureadline==6.3.3
 gunicorn==18.0
+httplib2==0.9
 ipython==2.1.0
 itsdangerous==0.23
 psycopg2==2.5.2
 requests==2.3.0
+six==1.8.0
+twilio==3.6.7
 uWSGI==2.0.6
 wsgiref==0.1.2
