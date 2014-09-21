@@ -24,3 +24,11 @@ Primary Purpose --> <Insert Tag Line Later>, One Final Stroke
 - Delivery service to take your stuff to the afterlife.
 
 - Connect Dropbox and choose folders to delete
+
+===========
+
+Later On:
+
+--> Write letters for friends
+--> Write letters to be given to children every birthday, etc
+--> Gifts to go to them on their birthdays (..."pick a bike that's fashoniable")

@@ -1,3 +1,23 @@
+==============
+A Hint Of Hope
+==============
+
+1. Single page website with brief message and field for phone number X
+2. Backend receiving phone number and adding to model X
+3. Chooses a message from a pre-populated list X
+4. Twilio message sending X
+5. Set up Postgres DB X
+6. Cron for sending the message every 1-3 weeks.
+7. Deploy on a server
+8. Test that the flow all works.
+9. Add more messages
+10. Complete single page CSS
+11. Send txt msg intro to people who sign up.
+
+================
+One Final Stroke
+================
+
 1. Install Yeoman X
 2. Set up Flask, Angular, Bootstrap X
 3. Make TwitterBot account (onefinalstroke) X
