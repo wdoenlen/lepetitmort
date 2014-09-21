@@ -1,7 +1,7 @@
 import app
 import os
 from flask import send_from_directory, make_response, request, redirect
-from  sqlalchemy.sql.expression import func, select
+from sqlalchemy.sql.expression import func, select
 from flask.ext.mobility.decorators import mobile_template
 import random
 
@@ -38,6 +38,7 @@ def save_phone():
         else:
             return app.utility.xhr_response({'success':False, 'msg':'Thanks, but we already have this number. Hope is coming.'}, 200)
     except Exception, e:
+        app.flask_app.logger.debug(e)
         return app.utility.xhr_response({'success':False, 'msg':'Apologies. We misheard you. Please submit again.'}, 200)
 
 

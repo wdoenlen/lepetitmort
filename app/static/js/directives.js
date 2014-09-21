@@ -21,32 +21,25 @@ angular.module('deathmsgDirectives', [])
     return {
       require: '?ngModel',
       link: function (scope, elem, attrs, ctrl) {
-        elem.bind('keypress', function(e) {
+        elem.bind('keydown', function(e) {
           var char = String.fromCharCode(e.which||e.charCode||e.keyCode);
-          if (!isNumber(char) || isGE(scope.phoneNumber, 10)) {
+          if (!(e.keyCode == 8) && (!isNumber(char) || isGE(scope.phoneNumber, 10))) {
             e.preventDefault();
           }
         });
         if (!ctrl) {return;}
         ctrl.$parsers.unshift(function (viewValue) {
+          viewValue = viewValue.trim();
           var plainNumber = viewValue.replace(/[^\d+]/g, '');
+          if (viewValue.charAt(viewValue.length - 1) == '-') {
+            plainNumber = plainNumber.slice(0, plainNumber.length - 1);
+          }
           elem.val(getFormattedPhone(plainNumber));
           return plainNumber;
         });
       }
     };
   }]);
-
-var isNumber = function(char) {
-  return ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'].indexOf(char) > -1;
-}
-
-var isGE = function(txt, num) {
-  if (!txt) {
-    return false;
-  }
-  return txt.length >= num;
-}
 
 var getFormattedPhone = function(str) {
   var len = str.length;
@@ -59,4 +52,15 @@ var getFormattedPhone = function(str) {
   } else {
     return '(' + str.slice(0, 3) + ') - ' + str.slice(3, 6) + ' - ' + str.slice(6, len);
   }
+}
+
+var isNumber = function(char) {
+  return ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'].indexOf(char) > -1;
+}
+
+var isGE = function(txt, num) {
+  if (!txt) {
+    return false;
+  }
+  return txt.length >= num;
 }
