@@ -10,7 +10,14 @@
       <span class="input-group-addon">
         <span class="glyphicon glyphicon-earphone"></span>
       </span>
-      <input class="form-control" ng-model="phoneNumber" type="tel" phoneformat="number">
+      <input class="form-control" ng-model="phoneNumber" type="tel"
+             phoneformat="number">
+      <span class="input-group-addon">
+        <button ng-click="submitPhone()" class="btn btn-primary">Submit</button>
+      </span>
     </div>
   </div>
+</div>
+<div class="row">
+  <p class="msg" ng-class="{visible:msg != null, failColor:!isSuccessMsg, successColor:isSuccessMsg}">{{msg}}</p>
 </div>

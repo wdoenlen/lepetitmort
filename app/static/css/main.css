@@ -13,16 +13,12 @@ body {
 .page {
     margin-top:20px;
 }
-.mobile-page {
-    margin-top:60px;
-}
 
-.communicate {
+.successColor {
     color: rgba(9, 14, 207, .5) !important;
-    text-decoration:none !important;
 }
-a.communicate, span.communicate {
-    cursor:pointer;
+.failColor {
+    color:#D61E74 !important;
 }
 
 .content {
@@ -37,121 +33,9 @@ a.communicate, span.communicate {
     height: 605px;
     font-size: 25px;
 }
-.mobile-content-text {
-    margin-top:25px;
-    font-size:40px;
-}
-
-.search-button {
-    visibility:hidden;
-    width:35px;
-    float:left;
-    font-size:18px;
-    position:relative;
-    top:6px;
-    cursor:pointer;
-}
-
-.record-button {
-    float:right;
-    margin-right:25px;
-}
 
 .visible {
     visibility:visible;
-}
-
-.instructions {
-    margin-top:80px;
-}
-
-.instruction-line {
-    height:35px;
-}
-
-.discover-line {
-    height:45px;
-    cursor:pointer;
-}
-.mobile-discover-line {
-    height:65px;
-    cursor:pointer;
-}
-.discover {
-    margin-top:80px;
-}
-
-.mobile-form-control {
-    height:100px;
-    font-size:40px;
-    border-color: rgba(9, 194, 207, .5);
-}
-
-.search-term {
-    text-align:center;
-    float:left;
-    margin-left:20px;
-    margin-right:20px;
-    width:760px;
-    max-width:760px;
-    border:0;
-}
-.mobile-search-term {
-    text-align:center;
-    width:100%;
-    border:0;
-    height:80px;
-}
-
-.poem-list-line {
-    margin-top:15px;
-}
-.mobile-poet-list {
-    margin-bottom:75px;
-}
-
-.warning {
-    text-align: center;
-    color: rgb(220,19,170);
-}
-
-.search {
-    height: 50px;
-    font-size:25px;
-    border-color: rgba(9, 194, 207, .5);
-}
-
-.supplementary-info {
-    margin-top:30px;
-    margin-left:15px;
-    margin-bottom:15px;
-}
-
-.poem-text {
-    height:497px;
-    overflow:scroll;
-    margin-left:15px;
-    margin-top:30px;
-}
-.mobile-poem-text {
-    margin-left:15px;
-    margin-top:30px;
-    padding-bottom:75px;
-}
-
-.body-text {
-    margin-left:15px;
-    margin-top:80px;
-}
-
-.list-index {
-    width: 145px;
-    float: left;
-}
-
-.list-info {
-    float:left;
-    margin-left:60px;
 }
 
 .ellipsis {
@@ -172,9 +56,6 @@ a.communicate, span.communicate {
     font-size:16px;
 }
 
-.red {
-    color:#D61E74 !important;
-}
 
 ::-webkit-input-placeholder {
     color: rgba(9, 14, 207, .5);
