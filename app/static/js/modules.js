@@ -16,7 +16,6 @@ angular.module('DeathMsg', ['deathmsgServices', 'deathmsgFilters', 'deathmsgDire
     }
 
     $scope.submitPhone = function() {
-      console.log($scope.phoneNumber);
       var phoneNumber = $scope.phoneNumber.toString().trim();
       if (phoneNumber.length == 10) {
         var form = new FormData();

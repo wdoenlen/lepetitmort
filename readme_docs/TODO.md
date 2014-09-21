@@ -12,7 +12,7 @@ A Hint Of Hope
 8. Test that the flow all works.
 9. Add more messages
 10. Complete single page CSS
-11. Send txt msg intro to people who sign up.
+11. Send txt msg intro to people who sign up. X
 
 ================
 One Final Stroke
