@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('OFS', ['ofsServices', 'ofsFilters', 'ofsDirectives', 'ui.bootstrap', 'angular-loading-bar'])
+angular.module('deathmsg', ['deathmsgServices', 'deathmsgFilters', 'deathmsgDirectives', 'ui.bootstrap', 'angular-loading-bar'])
   .controller('main', function($scope) {
 
   })
@@ -9,87 +9,6 @@ angular.module('OFS', ['ofsServices', 'ofsFilters', 'ofsDirectives', 'ui.bootstr
   })
   .controller('home', function($scope) {
 
-  })
-  .controller('thanks', function($scope, $http) {
-
-
-  })
-  .controller('kill', function($scope, $http) {
-
-  })
-  .controller('login', function($scope) {
-
-  })
-  .controller('configure', function($scope, $window) {
-    $scope.services = [
-      {name:'facebook', template:'/static/partials/facebookConfigure.html'},
-      {name:'twitter', template:'/static/partials/twitterConfigure.html'},
-      {name:'gmail', template:'/static/partials/gmailConfigure.html'}
-    ];
-  })
-  .controller('facebookConfigure', function($scope, $window) {
-    $window.fbAsyncInit = function() {
-      FB.init({
-        appId      : '786183401423657',
-        xfbml      : true,
-        cookie     : true,
-        version    : 'v2.1'
-      });
-      FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-      });
-    };
-
-    function statusChangeCallback(response) {
-      console.log('statusChangeCallback');
-      console.log(response);
-      // The response object is returned with a status field that lets the
-      // app know the current login status of the person.
-      // Full docs on the response object can be found in the documentation
-      // for FB.getLoginStatus().
-      if (response.status === 'connected') {
-        // Logged into your app and Facebook.
-        testAPI();
-      } else if (response.status === 'not_authorized') {
-        // The person is logged into Facebook, but not your app.
-        document.getElementById('status').innerHTML = 'Please log ' +
-          'into this app.';
-      } else {
-        // The person is not logged into Facebook, so we're not sure if
-        // they are logged into this app or not.
-        document.getElementById('status').innerHTML = 'Please log ' +
-          'into Facebook.';
-      }
-    }
-
-    $scope.checkLoginState = function() {
-      FB.getLoginStatus(function(response) {
-        statusChangeCallback(response);
-      });
-    }
-
-    function testAPI() {
-      console.log('Welcome!  Fetching your information.... ');
-      FB.api('/me', function(response) {
-        console.log('Successful login for: ' + response.name);
-        document.getElementById('status').innerHTML =
-          'Thanks for logging in, ' + response.name + '!';
-      });
-    }
-
-    (function(d, s, id){
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) {return;}
-      js = d.createElement(s); js.id = id;
-      // js.src = "//connect.facebook.net/en_US/sdk.js"; //Production is minified
-      js.src = "//connect.facebook.net/en_US/sdk/debug.js" //Debug is not minified
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-  })
-  .controller('twitterConfigure', function($scope) {
-
-  })
-  .controller('gmailConfigure', function($scope) {
   })
   .config([
     '$routeProvider', '$locationProvider',
@@ -103,30 +22,6 @@ angular.module('OFS', ['ofsServices', 'ofsFilters', 'ofsDirectives', 'ui.bootstr
           templateUrl: '/static/partials/about.html',
           controller: 'about'
         })
-        .when('/configure', {
-          templateUrl: '/static/partials/configure.html',
-          controller:'configure'
-        })
-	  .when('/', {
-  	  templateUrl: '/static/partials/home.html',
-      controller: 'home'
-	  })
-    .when('/about', {
-      templateUrl: '/static/partials/about.html',
-      controller: 'about'
-              })
-        .when('/kill', {
-                  templateUrl: 'static/partials/kill.html',
-                  controller: 'kill'
-              })
-        .when('/login', {
-                  templateUrl: 'static/partials/login.html',
-                  controller: 'login'
-              })
-        .when('/thanks', {
-                  templateUrl: 'static/partials/post_death.html',
-                  controller: 'thanks'
-              })
 	.otherwise({
 	  redirectTo: '/'
 	});

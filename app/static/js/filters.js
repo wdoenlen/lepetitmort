@@ -5,7 +5,7 @@ round = function(input, precision) {
     "";
 }
 
-angular.module('ofsFilters', [])
+angular.module('deathmsgFilters', [])
   .filter('prettifyDate', function() {
     return function(date) {
       return new Date(date).toDateString('yyyy-MM-dd');

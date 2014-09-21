@@ -18,11 +18,6 @@ def page_not_found(e):
 # routing for basic pages (pass routing onto the Angular app)
 @app.flask_app.route('/')
 @app.flask_app.route('/about')
-@app.flask_app.route('/configure')
-@app.flask_app.route('/kill')
-@app.flask_app.route('/thanks')
-@app.flask_app.route('/login')
-@app.flask_app.route('/configure')
 def basic_pages():
     return make_response(open('app/public/template/index.html').read())
 
