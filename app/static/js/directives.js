@@ -39,9 +39,11 @@ var getFormattedPhone = function(str) {
   var len = str.length;
   if (len < 3) {
     return str;
-  } else if (len >= 3 && len <= 6) {
+  } else if (len >= 3 && len < 6) {
     return '(' + str.slice(0,3) + ') - ' + str.slice(3);
+  } else if (len == 6) {
+    return '(' + str.slice(0,3) + ') - ' + str.slice(3) + ' - ';
   } else {
-    return '(' + str.slice(0,3) + ') - ' + str.slice(3,6) + ' - ' + str.slice(6,10)
+    return '(' + str.slice(0,3) + ') - ' + str.slice(3,6) + ' - ' + str.slice(6,10);
   }
 }
