@@ -126,6 +126,15 @@ body {
     padding-left: 5px;
 }
 
+.msg-label-wrapper {
+    margin-top: 20px;
+    text-align: center;
+}
+
+span.label-primary {
+    font-size: 12px;
+}
+
 @media (max-width: 480px) {
     .tel-input {
         width: 100%;
