@@ -202,9 +202,22 @@ body {
 }
 
 .full {
-  background: url(http://placehold.it/1920x1080) no-repeat center center fixed;
+  background: url(../img/lake.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  overflow: hidden;
+}
+
+.full:after {
+  background-color: rgba(0,0,0,.5);
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 20px;
 }
