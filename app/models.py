@@ -25,8 +25,8 @@ def create_phone(phone_string, commit=True):
 class Message(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     selection = db.Column(db.Integer) # index of message in message_options
-    creation_time = db.Column(db.Datetime)
-    sent_time = db.Column(db.Datetime)
+    creation_time = db.Column(db.DateTime)
+    sent_time = db.Column(db.DateTime)
     phone_id = db.Column(db.Integer, db.ForeignKey('phone.id'))
 
     def __init__(self, selection):
