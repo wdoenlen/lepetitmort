@@ -29,12 +29,11 @@ def twilio_receiver():
 def save_phone():
     try:
         phone_string = request.form['phone']
-        app.flask_app.logger.debug(phone_string)
         if phone_string and len(phone_string) == 10:
             app.models.create_phone(phone_string)
-        return app.utility.xhr_response({'success':True, 'msg':'Thanks. Hope is on the way.'})
+        return app.utility.xhr_response({'success':True, 'msg':'Thanks. Hope is on the way.'}, 200)
     except Exception, e:
-        return app.utility.xhr_response({'success':False, 'msg':'Apologies. We misheard you. Please submit again.'})
+        return app.utility.xhr_response({'success':False, 'msg':'Apologies. We misheard you. Please submit again.'}, 200)
 
 
 # @app.flask_app.route('/google34d3fe92d155a2aa.html')

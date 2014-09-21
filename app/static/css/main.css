@@ -3,11 +3,26 @@ body {
    font-weight: 300;
 }
 
-.aligncenter {
+.info {
+    padding-bottom:70px;
+}
+.topline {
+    margin-bottom:25px;
+    font-size:60px;
+}
+.byline {
+    font-size:28px;
+}
+
+input.phone {
+    font-size:40px;
+    height:70px;
     text-align:center;
 }
-.alignright {
-    text-align:right;
+.phone-icon {
+    font-size:3em;
+    position:relative;
+    top:3px;
 }
 
 .page {
@@ -89,16 +104,4 @@ body {
   -o-background-size: cover;
   background-size: cover;
   overflow: hidden;
-}
-
-h1 {
-    font-size: 50px;
-}
-
-p {
-    font-size: 20px;
-}
-
-.tel-input {
-    width: 38%;
 }
