@@ -62,6 +62,7 @@ class Message(db.Model):
         phone = phone or Phone.query.get(self.phone_id)
         body = message_options.options[self.selection]['body']
         if send_by_twilio(phone, body):
+            app.flask_app.logger.debug('Sent message %d to phone %s' % (self.id, phone.phone_string))
             self.sent_time = utility.get_time()
             db.session.commit()
             return True
@@ -116,33 +117,3 @@ def send_by_twilio(to_phone, message):
         return True
     except:
         return False
-
-class Cron(Command):
-    # TODO: Incomplete
-    """Runs cron for sending messages"""
-    def __init__(self, days_since_msg=7, avg_msg_days=14, max_msg_days=21):
-        self.days_since_msg = days_since_msg # num days since last message
-        self.avg_msg_days = avg_msg_days # avg num of days since last message for any user
-        self.max_msg_days = max_msg_days # max num of days since last message for any user
-
-    def run(self):
-        cron = CronTab()
-
-        try:
-            messages = []
-            for phone in self.get_phones():
-                msg = create_message(phone.id, commit=False)
-                app.db.session.add(message)
-                messages.append((phone, msg))
-            app.db.session.commit()
-
-            for phone, message in messages:
-                message.send(phone)
-        except Exception, e:
-            app.flask_app.logger.debug('Cron failed: %s.' % e)
-            return
-
-    def get_phones(self):
-        today = datetime.datetime.now()
-        latest_msg_by_phone = Message.query(Message.phone_id, func.max(Message.sent_time)).group_by(Message.phone_id)
-        return []
