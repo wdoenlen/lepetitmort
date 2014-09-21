@@ -2,7 +2,7 @@
 
 /* Directives */
 
-angular.module('ofsDirectives', [])
+angular.module('deathmsgDirectives', [])
   .directive('blurMe', function($timeout) {
     return {
       scope: { trigger: '@blurMe' },
