@@ -9,7 +9,7 @@ A Hint Of Hope
 5. Set up Postgres DB X
 6. Cron for sending the message every 1-3 weeks.
 7. Deploy on a server
-8. Test that the flow all works.
+8. Test that the flow all works. X
 9. Add more messages X
 10. Complete single page css X
 11. Send txt msg intro to people who sign up. X

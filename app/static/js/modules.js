@@ -9,7 +9,7 @@ angular.module('DeathMsg', ['deathmsgServices', 'deathmsgFilters', 'deathmsgDire
   })
   .controller('home', function($scope, Post) {
     $scope.msg = null;
-    $scope.isSuccessMsg = null;
+    $scope.isSuccessMsg = false;
     $scope.setMessage = function(obj) {
       $scope.msg = obj.msg;
       $scope.isSuccessMsg = obj.success;

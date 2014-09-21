@@ -16,6 +16,14 @@ body {
     font-size:28px;
 }
 
+.message {
+    color: rgba(9, 14, 207, .75) !important;
+    text-align:center !important;
+    font-size:28px !important;
+    font-weight:bold;
+    margin-top:25px;
+}
+
 .tel-input {
     width: 59.333333%;
     float: none;
@@ -36,13 +44,6 @@ input.phone {
 
 .page {
     margin-top:20px;
-}
-
-.successColor {
-    color: rgba(9, 14, 207, .5) !important;
-}
-.failColor {
-    color:#D61E74 !important;
 }
 
 .content {
