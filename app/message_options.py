@@ -9,7 +9,7 @@ h = ty_enum.get('hope')
 i = ty_enum.get('intro')
 
 options = [
-    {'type':i, 'body':"Hi there. We're so glad to send you hints of hope. We don't send them every day, more like every one to two weeks. And if at any time you decide you no longer need hope, send HOPE to this number and we'll promptly stop delivering them to your doorstep."},
+    {'type':i, 'body':"Hi, we're so glad to send you hints of hope. We'll send a message every one to two weeks. If you decide you no longer need hope, reply HOPE to this number and we'll promptly stop delivering them."},
     {'type':d, 'body':'Remember that you are going to die.'},
     {'type':d, 'body':'Death is the destination we all share.'},
     {'type':d, 'body':'Death is very likely the single best invention of life. It clears out the old to make way for the new.'},
