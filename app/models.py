@@ -97,11 +97,16 @@ def get_selection(phone, option_type=None):
     If this is the 3rd message, gets a death msg
     Tries to keep ~= the counts per message (for a given phone).
     """
+    def check_selection(option_type, selection_type):
+        if option_type == None:
+            return selection_type != message_options.i
+        return selection_type == option_type
+
     messages = phone.messages.all() or []
     if not option_type:
         option_type = get_option_type(messages)
     counts = sorted(
-        [{'index':index, 'count':messages.count(index)} for index, option in enumerate(message_options.options) if not option_type or option['type'] == option_type],
+        [{'index':index, 'count':messages.count(index)} for index, option in enumerate(message_options.options) if check_selection(option_type, option['type'])],
         key = lambda message: message.get('count'))
     return counts[0]['index']
 
