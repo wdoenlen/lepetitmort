@@ -39,9 +39,19 @@ class Phone(db.Model):
         else:
             fapp.logger.debug('Phone %s had intro send fail' % self.phone_string)
 
-def create_phone(phone_string, commit=True):
+    def send_reintro(self):
+        selection = get_selection(self, message_options.r)
+        message = create_message(self.id, selection=selection)
+        if not message.send(self):
+            fapp.logger.debug('Phone %s had re-intro send fail' % self.phone_string)
+
+
+def get_or_create_phone(phone_string, commit=True):
     if Phone.query.filter(Phone.phone_string == phone_string).count() > 0:
-        return None
+        return True, Phone.query.filter(Phone.phone_string == phone_string).first()
+    return False, create_phone(phone_string, commit)
+
+def create_phone(phone_string, commit=True):
     phone = Phone(phone_string)
     if commit:
         db.session.add(phone)
@@ -99,7 +109,7 @@ def get_selection(phone, option_type=None):
     """
     def check_selection(option_type, selection_type):
         if option_type == None:
-            return selection_type != message_options.i
+            return selection_type != message_options.i and selection_type != message_options.r
         return selection_type == option_type
 
     messages = phone.messages.all() or []
