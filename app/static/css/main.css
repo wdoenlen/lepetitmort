@@ -12,8 +12,15 @@ body {
     margin-bottom:25px;
     font-size:60px;
 }
+.m-topline {
+    font-weight: bold;
+    font-size:35px;
+}
 .byline {
     font-size:28px;
+}
+.m-byline {
+    font-size:20px;
 }
 
 .message {
@@ -40,6 +47,16 @@ input.phone {
     font-size:2em;
     position:relative;
     top:3px;
+}
+.m-phone {
+    font-size:1em;
+}
+
+.m-submit {
+    font-size:9px;
+}
+.white-space-normal {
+    white-space: normal;
 }
 
 .page {
@@ -113,6 +130,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-attachment: fixed;
   overflow: hidden;
   min-height: 100%;
 }

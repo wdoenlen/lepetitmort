@@ -1,23 +1,24 @@
 <div class="row info">
   <div class="col-md-12 col-sm-12">
-    <h1 class="topline">A Hint of Hope</h1>
-    <p class="byline">We send inspirational messages to your phone.</p>
+    <h1 ng-class="{'m-topline':mobile, topline:!mobile}">A Hint of Hope</h1>
+    <p ng-class="{'m-byline':mobile, byline:!mobile}">We send inspirational messages to your phone.</p>
   </div>
 </div>
 <div class="row">
   <div class="col-md-7 col-sm-12 tel-input">
-    <div class="input-group">
+    <div class="row input-group">
       <span class="input-group-addon">
-        <span class="fa fa-phone phone-icon"></span>
+        <span class="fa fa-phone phone-icon" ng-class="{'m-phone':mobile}"></span>
       </span>
       <input class="form-control phone" ng-model="phoneNumber" type="tel"
              phoneformat="number">
       <span class="input-group-addon btn-go">
-        <button ng-click="submitPhone()" class="btn btn-primary">Go</button>
+        <button ng-click="submitPhone()" class="btn btn-primary" ng-class="{'m-submit':mobile}">Go</button>
       </span>
     </div>
   </div>
 </div>
 <div class="row msg-label-wrapper">
-  <span ng-class="{'label-success':isSuccessMsg, 'label-danger':!isSuccessMsg}" class="label">{{msg}}</span>
+  <span ng-class="{'label-success':isSuccessMsg,
+  'label-danger':!isSuccessMsg, 'white-space-normal':mobile}" class="label">{{msg}}</span>
 </div>
