@@ -10,7 +10,7 @@ i = ty_enum.get('intro')
 r = ty_enum.get('reintro')
 
 options = [
-    {'type':i, 'body':"Hi, we're so glad to send you hints of hope. We'll send a message every one to two weeks. If you decide you no longer need hope, reply HOPE to this number and we'll promptly stop delivering them."},
+    {'type':i, 'body':"Hi, we're so glad to send you hints of hope. You'll receive them every one to two weeks, and if you decide you no longer need hope, reply HOPE to this number. - HintsOfHope.Today"},
     {'type':d, 'body':'Remember that you are going to die.'},
     {'type':d, 'body':'Death is the destination we all share.'},
     {'type':d, 'body':'Death is very likely the single best invention of life. It clears out the old to make way for the new.'},
@@ -30,5 +30,5 @@ options = [
     {'type':h, 'body':'Set your goals high; Make friends with different kinds of people; Enjoy simple pleasures'},
     {'type':h, 'body':'Stand on high ground; Sit on level ground; Walk on expansive ground.'},
     {'type':h, 'body':"Still, I'll rise"},
-    {'type':r, 'body':"Hi there, welcome back to Hints of Hope."}
+    {'type':r, 'body':"Hi there, welcome back to Hints of Hope. We're so honored to be your Mercury of inspiration."}
     ]
