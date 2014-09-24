@@ -44,7 +44,7 @@ def save_phone():
             phone.deleted = False
             app.db.session.commit()
             phone.send_reintro()
-            return app.utility.xhr_response({'success':True, 'msg':"Thanks, and welcome back! Another does of hope is heading your way."}, 200)
+            return app.utility.xhr_response({'success':True, 'msg':"Thanks, and welcome back! Another dose of hope is heading your way."}, 200)
         elif has_phone:
             return app.utility.xhr_response({'success':False, 'msg':'Thanks, but we already have this number. Hope is coming.'}, 200)
         else:
