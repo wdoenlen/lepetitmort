@@ -45,6 +45,18 @@ class Phone(db.Model):
         if not message.send(self):
             fapp.logger.debug('Phone %s had re-intro send fail' % self.phone_string)
 
+def delete_phone(numstr):
+    if not numstr:
+        return False
+    if len(numstr) == 12 and numstr[:2] == '+1':
+        phone = Phone.query.filter(Phone.phone_string == numstr[2:]).first()
+        if not phone:
+            return False
+        phone.deleted = True
+        app.db.session.commit()
+        return True
+    else: # intl #
+        return False
 
 def get_or_create_phone(phone_string, commit=True):
     if Phone.query.filter(Phone.phone_string == phone_string).count() > 0:

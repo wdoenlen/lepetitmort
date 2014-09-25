@@ -27,7 +27,12 @@ def twilio_receiver():
     from_number = request.values.get('From', None)
     app.flask_app.logger.debug(from_number)
     resp = twilio.twiml.Response()
-    resp.message("We're awfully sorry to see you go, but we understand that sometimes hope isn't what we need. If that changes, don't be a stranger - we're here for you.")
+    if app.models.delete_phone(from_number):
+        app.flask_app.logger.debug('SUCCESS in deleting number')
+        resp.message("We're awfully sorry to see you go, but we understand that sometimes hope isn't what we need. If that changes, don't be a stranger - we're here for you.")
+    else:
+        app.flask_app.logger.debug('FAILURE in deleting number')
+        resp.message("Apologies, there seems to have been a mistake. Please try again.")
     return str(resp)
 
 @app.flask_app.route('/save-phone', methods=['POST'])
@@ -41,10 +46,7 @@ def save_phone():
             return app.utility.xhr_response({'success':False, 'msg':"Please submit a complete phone number."}, 200)
 
         if has_phone and phone.deleted:
-            phone.deleted = False
-            app.db.session.commit()
-            phone.send_reintro()
-            return app.utility.xhr_response({'success':True, 'msg':"Thanks, and welcome back! Another does of hope is heading your way."}, 200)
+            return app.utility.xhr_response({'success':False, 'msg':"Thanks for re-trying to connect with us. If you really are ready for more inspiration, email us at cinjon.resnick@gmail.com."}, 200)
         elif has_phone:
             return app.utility.xhr_response({'success':False, 'msg':'Thanks, but we already have this number. Hope is coming.'}, 200)
         else:
