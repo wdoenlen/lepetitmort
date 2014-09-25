@@ -53,7 +53,7 @@ def delete_phone(numstr):
         if not phone:
             return False
         phone.deleted = True
-        app.db.session.commit()
+        db.session.commit()
         return True
     else: # intl #
         return False

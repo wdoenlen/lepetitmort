@@ -25,13 +25,13 @@ def basic_pages():
 @app.flask_app.route('/twilio_receiver')
 def twilio_receiver():
     from_number = request.values.get('From', None)
-    app.flask_app.logger.debug(from_number)
+    body = request.values.get('Body', None)
     resp = twilio.twiml.Response()
-    if app.models.delete_phone(from_number):
-        app.flask_app.logger.debug('SUCCESS in deleting number')
+    if body != 'HOPE':
+        resp.message("Sorry, we didn't recognize your message.")
+    elif app.models.delete_phone(from_number):
         resp.message("We're awfully sorry to see you go, but we understand that sometimes hope isn't what we need. If that changes, don't be a stranger - we're here for you.")
     else:
-        app.flask_app.logger.debug('FAILURE in deleting number')
         resp.message("Apologies, there seems to have been a mistake. Please try again.")
     return str(resp)
 
