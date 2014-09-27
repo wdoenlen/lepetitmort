@@ -1,30 +1,55 @@
 import app
+from app.models import Message
+import random
+import datetime
+from sqlalchemy.sql import func
 
-days_since_msg = 7 # num days since last message
-avg_msg_days   = 14  # avg num of days since last message for any user
-max_msg_days   = 17 # max num of days since last message for any user
+min_msg_days = 7 # num days since last message
+max_msg_days = 14 # max num of days since last message for any user
 
-def run(days=None, avg_days=None, max_days=None):
-    days = days or days_since_msg
-    avg_days = avg_days or avg_msg_days
+def test():
+    app.flask_app.logger.debug('Hi in test')
+
+def run(min_days=None, max_days=None, test=False):
+    min_days = min_days or min_msg_days
     max_days = max_days or max_msg_days
 
-    try:
-        messages = []
-        for phone in get_phones_on_tap(days, avg_days, max_days):
-            msg = create_message(phone.id, commit=False)
-            app.db.session.add(message)
-            app.flask_app.logger.debug('Loaded up message %d for phone %s' % (msg.id, phone.phone_string))
-            messages.append((phone, msg))
+    messages = []
+    for phone_id in get_phones_on_tap(min_days, max_days):
+        try:
+            msg = app.models.create_message(phone_id, commit=False)
+            app.db.session.add(msg)
+            app.flask_app.logger.debug('Loaded up message with selection %d for phone %d' % (msg.selection, phone_id))
+            messages.append((phone_id, msg))
+        except Exception, e:
+            app.flask_app.logger.debug('Failed to load message for phone %d' % phone_id)
+            app.flask_app.logger.debug(e)
+
+    if not test:
         app.db.session.commit()
 
-        for phone, message in messages:
-            message.send(phone)
-    except Exception, e:
-        app.flask_app.logger.debug('Cron failed: %s' % e)
+    for phone_id, message in messages:
+        try:
+            if test:
+                app.flask_app.logger.debug(message.get_body())
+            else:
+                message.send(app.models.Phone.query.get(phone_id))
+        except Exception, e:
+            app.flask_app.logger.debug('Failed to send message with selection %d for phone %d' % (message.selection, phone_id))
+            app.flask_app.logger.debug(e)
 
-def get_phones_on_tap(days, avg_days, max_days):
-    # TODO
+    if not test:
+        app.db.session.commit()
+
+def get_phones_on_tap(min_days, max_days):
+    ret = []
     today = datetime.datetime.now()
-    latest_msg_by_phone = Message.query(Message.phone_id, func.max(Message.sent_time)).group_by(Message.phone_id)
-    return []
+    delta_min = datetime.timedelta(min_days)
+    delta_max = datetime.timedelta(max_days)
+    for phone_id, time in app.db.session.query(Message.phone_id, func.max(Message.sent_time)).group_by(Message.phone_id):
+        delta = today - time
+        if delta < delta_min:
+            continue
+        elif delta >= delta_max or 1.0 * delta.days / (max_days - min_days) > random.random():
+            ret.append(phone_id)
+    return ret
