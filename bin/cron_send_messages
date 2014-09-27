@@ -1,0 +1,6 @@
+#!/usr/bin/env python
+import app
+app.flask_app.logger.debug('Cron Starting')
+app.scripts.cron.greet()
+app.scripts.cron.run()
+app.flask_app.logger.debug('Cron Ending')
