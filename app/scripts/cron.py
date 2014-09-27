@@ -47,6 +47,9 @@ def get_phones_on_tap(min_days, max_days):
     delta_min = datetime.timedelta(min_days)
     delta_max = datetime.timedelta(max_days)
     for phone_id, time in app.db.session.query(Message.phone_id, func.max(Message.sent_time)).group_by(Message.phone_id):
+        if not phone_id or not time:
+            app.flask_app.logger.warn('WARN get_phones_on_tap had no value on phone_id ' + phone_id + ' or time ' + time)
+            continue
         delta = today - time
         if delta < delta_min:
             continue

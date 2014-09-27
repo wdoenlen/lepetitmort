@@ -79,12 +79,15 @@ class Message(db.Model):
         self.selection = selection
         self.creation_time = utility.get_time()
 
-    def get_body(self):
-        return message_options.options[self.selection]['body']
+    def get_body(self, signature=True):
+        body = message_options.options[self.selection]['body']
+        if signature:
+            body += '\n- Hint Of Hope'
+        return body
 
     def send(self, phone=None):
         phone = phone or Phone.query.get(self.phone_id)
-        body = self.get_body() + '\n- Hint Of Hope'
+        body = self.get_body()
         if send_by_twilio(phone.phone_string, body):
             self.sent_time = utility.get_time()
             db.session.commit()
