@@ -5,10 +5,8 @@ from app import flask_app as fapp
 import random
 import os
 import datetime
-from sqlalchemy.sql import func
 from twilio.rest import TwilioRestClient
 import message_options
-from crontab import CronTab
 from flask.ext.script import Command
 
 class Phone(db.Model):
@@ -81,9 +79,12 @@ class Message(db.Model):
         self.selection = selection
         self.creation_time = utility.get_time()
 
+    def get_body(self):
+        return message_options.options[self.selection]['body']
+
     def send(self, phone=None):
         phone = phone or Phone.query.get(self.phone_id)
-        body = message_options.options[self.selection]['body']
+        body = self.get_body() + '\n- Hint Of Hope'
         if send_by_twilio(phone.phone_string, body):
             self.sent_time = utility.get_time()
             db.session.commit()
@@ -97,6 +98,7 @@ def create_message(phone_id, selection=None, commit=True):
     if selection == None:
         selection = get_selection(phone)
     message = Message(selection)
+    phone.messages.append(message)
     if commit:
         db.session.add(message)
         db.session.commit()
