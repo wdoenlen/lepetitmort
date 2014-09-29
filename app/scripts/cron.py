@@ -57,6 +57,11 @@ def get_phones_on_tap(min_days, max_days):
         delta = today - time
         if delta < delta_min:
             continue
-        elif delta >= delta_max or 1.0 * delta.days / (max_days - min_days) > random.random():
+        elif delta >= delta_max or 1.0 * delta.seconds / day_to_secs(max_days - min_days) > random.random():
             ret.append(phone_id)
     return ret
+
+def day_to_secs(day):
+    if day == None or day < 0:
+        return None
+    return day * 24 * 60 * 60
