@@ -29,6 +29,10 @@ def twilio_receiver():
     resp = twilio.twiml.Response()
     if body != 'HOPE':
         resp.message("Sorry, we didn't recognize your message.")
+        try:
+            app.flask_app.logger.debug('Message from %s: %s' % (from_number, body))
+        except Exception, e:
+            pass
     elif app.models.delete_phone(from_number):
         resp.message("We're awfully sorry to see you go, but we understand that sometimes hope isn't what we need. If that changes, don't be a stranger - we're here for you.")
     else:
