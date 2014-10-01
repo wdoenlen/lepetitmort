@@ -135,6 +135,8 @@ def get_selection(phone, option_type=None):
     counts = sorted(
         [{'index':index, 'count':messages.count(index)} for index, option in enumerate(message_options.options) if check_selection(option_type, option['type'])],
         key = lambda message: message.get('count'))
+    counts = [c for c in counts if c['count'] == counts[0]['count']]
+    random.shuffle(counts)
     return counts[0]['index']
 
 from_phone="+14158010048"
