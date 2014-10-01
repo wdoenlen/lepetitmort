@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('deathmsgServices', ['ngResource', 'ngRoute', 'ngSanitize'])
+angular.module('deathmsgServices', ['ngRoute', 'ngResource'])
   .factory('Post', function($http) {
     return {
       postPhone: function(form) {

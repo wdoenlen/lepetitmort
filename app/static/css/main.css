@@ -80,25 +80,6 @@ input.phone {
     visibility:visible;
 }
 
-.ellipsis {
-    -o-text-overflow: ellipsis;   /* Opera */
-    text-overflow:    ellipsis;   /* IE, Safari (WebKit) */
-    overflow:hidden;              /* don't show excess chars */
-    white-space:nowrap;           /* force single line */
-}
-
-.text-align-right {
-    text-align:right;
-}
-
-.dropdown-menu > li > a {
-    padding: 4px 20px;
-}
-.typeahead-template-span {
-    font-size:16px;
-}
-
-
 ::-webkit-input-placeholder {
     color: rgba(9, 14, 207, .5);
 }

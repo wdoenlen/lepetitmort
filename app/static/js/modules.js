@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('DeathMsg', ['deathmsgServices', 'deathmsgFilters', 'deathmsgDirectives', 'ui.bootstrap', 'angular-loading-bar'])
+angular.module('DeathMsg', ['deathmsgServices', 'deathmsgDirectives', 'angular-loading-bar'])
   .controller('main', function($scope) {
 
   })
