@@ -30,5 +30,8 @@ options = [
     {'type':h, 'body':'Set your goals high; Make friends with different kinds of people; Enjoy simple pleasures'},
     {'type':h, 'body':'Stand on high ground; Sit on level ground; Walk on expansive ground.'},
     {'type':h, 'body':"Still, I'll rise"},
-    {'type':r, 'body':"Hi there, welcome back to Hints of Hope. We're so honored to be your Mercury of inspiration."}
+    {'type':r, 'body':"Hi there, welcome back to Hints of Hope. We're so honored to be your Mercury of inspiration."},
+    {'type':d, 'body':"The race for quality has no finish line, so technically, it's more like a death march."},
+    {'type':h, 'body':"Trust yourself. You know more than you think you do."},
+    {'type':h, 'body':"Rise up. Start Fresh. See the bright opportunity in each day."}
     ]
