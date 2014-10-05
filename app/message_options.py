@@ -24,7 +24,7 @@ options = [
     {'type':h, 'body':'You are the master of your fate, the captain of your soul.'},
     {'type':h, 'body':'Dare to name the sky your own.'},
     {'type':h, 'body':"For you the flag is flung, for you the bugle trills. For you bouquets and ribbon'd wreaths, for you the shores a-crowding."},
-    {'type':h, 'body':'So we beat on, boats against the current, borne back ceaselessly into the past.'},
+    {'type':d, 'body':'So we beat on, boats against the current, borne back ceaselessly into the past.'},
     {'type':h, 'body':"That is part of the beauty of all literature. You discover that your longings are universal longings, that you're not lonely and isolated from anyone. You belong."},
     {'type':h, 'body':'Let us learn to show our friendship for a man when he is alive and not after he is dead.'},
     {'type':h, 'body':'Set your goals high; Make friends with different kinds of people; Enjoy simple pleasures'},
@@ -33,5 +33,6 @@ options = [
     {'type':r, 'body':"Hi there, welcome back to Hints of Hope. We're so honored to be your Mercury of inspiration."},
     {'type':d, 'body':"The race for quality has no finish line, so technically, it's more like a death march."},
     {'type':h, 'body':"Trust yourself. You know more than you think you do."},
-    {'type':h, 'body':"Rise up. Start Fresh. See the bright opportunity in each day."}
+    {'type':h, 'body':"Rise up. Start Fresh. See the bright opportunity in each day."},
+    {'type':h, 'body':"Destiny dressed you this morning my friend, and now Fear is trying to pull off your pants. If you give up, if you give in, you're gonna end up naked with Fear just standing there laughing at your dangling unmentionables!"}
     ]

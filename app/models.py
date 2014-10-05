@@ -110,18 +110,19 @@ def create_message(phone_id, selection=None, commit=True):
 def filter_options(ty):
     return [option for option in message_options.options if option['type'] == ty]
 
+first_d_message = 4 # first death msg
 def get_option_type(messages):
-    if len(messages) < 3: # first or second message (first is an intro msg)
+    if len(messages) < first_d_message:
         return message_options.h
-    elif len(messages) == 3: # third message
+    elif len(messages) == first_d_message:
         return message_options.d
     return None
 
 def get_selection(phone, option_type=None):
     """
     Gets the next selection for the given phone
-    If this is the 1st or 2nd message, gets a hopeful msg
-    If this is the 3rd message, gets a death msg
+    If this is the 1st, 2nd, or 3rd message, gets a hopeful msg
+    If this is the 4th message, gets a death msg
     Tries to keep ~= the counts per message (for a given phone).
     """
     def check_selection(option_type, selection_type):
