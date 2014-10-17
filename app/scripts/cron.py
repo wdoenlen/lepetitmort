@@ -4,8 +4,8 @@ import random
 import datetime
 from sqlalchemy.sql import func
 
-min_msg_days = 7 # min num days since last message
-max_msg_days = 14 # max num days since last message
+min_msg_days = 5 # min num days since last message
+max_msg_days = 9 # max num days since last message
 
 def greet():
     app.flask_app.logger.debug('Cron: Hi')
