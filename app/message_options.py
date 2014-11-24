@@ -34,5 +34,12 @@ options = [
     {'type':d, 'body':"The race for quality has no finish line, so technically, it's more like a death march."},
     {'type':h, 'body':"Trust yourself. You know more than you think you do."},
     {'type':h, 'body':"Rise up. Start Fresh. See the bright opportunity in each day."},
-    {'type':h, 'body':"Destiny dressed you this morning my friend, and now Fear is trying to pull off your pants. If you give up, if you give in, you're gonna end up naked with Fear just standing there laughing at your dangling unmentionables!"}
+    {'type':h, 'body':"Destiny dressed you this morning my friend, and now Fear is trying to pull off your pants. If you give up, if you give in, you're gonna end up naked with Fear just standing there laughing at your dangling unmentionables!"},
+    {'type':d, 'body':"Things are sweeter when they're lost. I know - because once I wanted something and got it. It was the only thing I ever wanted badly. And when I got it, it turned to dust in my hands."},
+    {'type':h, 'body':"Her heart sank into her shoes as she realized at last how much she wanted him. No matter what his past was, no matter what he had done. Which was not to say that she would ever let him know, but only that he moved her chemically more than anyone she had ever met, that all other men seemed pale beside him."},
+    {'type':h, 'body':"Somewhere inside of you will always be the person that you were in your finest hour."},
+    {'type':h, 'body':"You are the finest, loveliest, tenderest, and most beautiful person someone has ever known - and even that is an understatement."},
+    {'type':d, 'body':"There are all kinds of love in this world, but never the same love twice."},
+    {'type':h, 'body':"Listen to the mustn'ts, child. Listen to the don'ts. Listen to the shouldn'ts, the impossibles, the won'ts. Listen to the never haves, then listen close to me... Anything can happen, child. Anything can be."},
+    {'type':d, 'body':"If you're reading this...Congratulations, you're alive. If that's not something to smile about, then I don't know what is."}
     ]
