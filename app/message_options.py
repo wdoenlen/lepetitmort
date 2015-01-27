@@ -41,5 +41,10 @@ options = [
     {'type':h, 'body':"You are the finest, loveliest, tenderest, and most beautiful person someone has ever known - and even that is an understatement."},
     {'type':d, 'body':"There are all kinds of love in this world, but never the same love twice."},
     {'type':h, 'body':"Listen to the mustn'ts, child. Listen to the don'ts. Listen to the shouldn'ts, the impossibles, the won'ts. Listen to the never haves, then listen close to me... Anything can happen, child. Anything can be."},
-    {'type':d, 'body':"If you're reading this...Congratulations, you're alive. If that's not something to smile about, then I don't know what is."}
+    {'type':d, 'body':"If you're reading this...Congratulations, you're alive. If that's not something to smile about, then I don't know what is."},
+    {'type':d, 'body':"The deepest regret is death. The only thing to face is death. This is all I think about. There's only one issue here. I want to live."},
+    {'type':d, 'body':"Your status as a doomed man lends your words a certain prestige and authority. As the time nears, people will be eager to hear what you have to say. They will seek you out."},
+    {'type':h, 'body':"If you're going through hell, keep going."},
+    {'type':h, 'body':"Be the person your dog thinks you are."},
+    {'type':h, 'body':"Just do it."}
     ]
