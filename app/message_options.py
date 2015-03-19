@@ -46,5 +46,9 @@ options = [
     {'type':d, 'body':"Your status as a doomed man lends your words a certain prestige and authority. As the time nears, people will be eager to hear what you have to say. They will seek you out."},
     {'type':h, 'body':"If you're going through hell, keep going."},
     {'type':h, 'body':"Be the person your dog thinks you are."},
-    {'type':h, 'body':"Just do it."}
+    {'type':h, 'body':"Just do it."},
+    {'type':d, 'body':"Coffee should not involve whipped cream or sweet syrups. It should be a black, bitter foretaste of the day that is to come."},
+    {'type':d, 'body':"You still die alone."},
+    {'type':d, 'body':"Stop. Look around you. In ten years, who will be left? Twenty years? Fifty?"},
+    {'type':h, 'body':"The world is yours for the making. Mold your future as you see fit."}
     ]
