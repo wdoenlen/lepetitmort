@@ -131,10 +131,11 @@ def get_selection(phone, option_type=None):
         return selection_type == option_type
 
     messages = phone.messages.all() or []
+    message_selections = [m.selection for m in messages]
     if not option_type:
         option_type = get_option_type(messages)
     counts = sorted(
-        [{'index':index, 'count':messages.count(index)} for index, option in enumerate(message_options.options) if check_selection(option_type, option['type'])],
+        [{'index':index, 'count':message_selections.count(index)} for index, option in enumerate(message_options.options) if check_selection(option_type, option['type'])],
         key = lambda message: message.get('count'))
     counts = [c for c in counts if c['count'] == counts[0]['count']]
     random.shuffle(counts)
