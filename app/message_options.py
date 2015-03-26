@@ -50,5 +50,9 @@ options = [
     {'type':d, 'body':"Coffee should not involve whipped cream or sweet syrups. It should be a black, bitter foretaste of the day that is to come."},
     {'type':d, 'body':"You still die alone."},
     {'type':d, 'body':"Stop. Look around you. In ten years, who will be left? Twenty years? Fifty?"},
-    {'type':h, 'body':"The world is yours for the making. Mold your future as you see fit."}
+    {'type':h, 'body':"The world is yours for the making. Mold your future as you see fit."},
+    {'type':h, 'body':"I kept my head down. I jumped into a little creek, which became a river, which turned into a gulf, which grew into an ocean. All I ever did was swim."},
+    {'type':h, 'body':"If you want to make art, make art. Do not wait for an institution to give you permission."},
+    {'type':d, 'body':"Not answering email is important to remind us that life will go on without us."},
+    {'type':d, 'body':"When life hands you lemons, accept that the universe is indifferent to your pain."}
     ]
