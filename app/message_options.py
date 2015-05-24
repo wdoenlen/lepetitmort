@@ -54,5 +54,12 @@ options = [
     {'type':h, 'body':"I kept my head down. I jumped into a little creek, which became a river, which turned into a gulf, which grew into an ocean. All I ever did was swim."},
     {'type':h, 'body':"If you want to make art, make art. Do not wait for an institution to give you permission."},
     {'type':d, 'body':"Not answering email is important to remind us that life will go on without us."},
-    {'type':d, 'body':"When life hands you lemons, accept that the universe is indifferent to your pain."}
+    {'type':d, 'body':"When life hands you lemons, accept that the universe is indifferent to your pain."},
+    {'type':h, 'body':"Greatly he failed, but he did dare greatly."},
+    {'type':d, 'body':"When that tomorrow comes, you're going to want one more today."},
+    {'type':d, 'body':"As you find yourself adventuring through unknown lands, check your engine temperature frequently."},
+    {'type':h, 'body':"Immortality is to live your life doing good things and leaving your mark behind."},
+    {'type':d, 'body':"How many times will you watch the full moon rise? Perhaps twenty. And yet it all seems limitless."},
+    {'type':d, 'body':"Because we don't know when we will die, we get to think of life as an inexhaustible well. Yet everything happens a certain number of times, and a very small number, really."},
+    {'type':h, 'body':"I do not wish to say that one should love death; but one should love life so magnanimously, so without calculating and selecting, that love of death is continually and involuntarily included."}
     ]
