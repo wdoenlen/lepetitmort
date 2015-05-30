@@ -62,5 +62,6 @@ options = [
     {'type':d, 'body':"How many times will you watch the full moon rise? Perhaps twenty. And yet it all seems limitless."},
     {'type':d, 'body':"Because we don't know when we will die, we get to think of life as an inexhaustible well. Yet everything happens a certain number of times, and a very small number, really."},
     {'type':h, 'body':"I do not wish to say that one should love death; but one should love life so magnanimously, so without calculating and selecting, that love of death is continually and involuntarily included."},
-    {'type':h, 'body':"You will be a happy moment in someone's life."}
+    {'type':h, 'body':"You will be a happy moment in someone's life."},
+    {'type':d, 'body':"Lost time is never found again. Do it now."}
     ]
