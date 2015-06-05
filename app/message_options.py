@@ -63,5 +63,6 @@ options = [
     {'type':d, 'body':"Because we don't know when we will die, we get to think of life as an inexhaustible well. Yet everything happens a certain number of times, and a very small number, really."},
     {'type':h, 'body':"I do not wish to say that one should love death; but one should love life so magnanimously, so without calculating and selecting, that love of death is continually and involuntarily included."},
     {'type':h, 'body':"You will be a happy moment in someone's life."},
-    {'type':d, 'body':"Lost time is never found again. Do it now."}
+    {'type':d, 'body':"Lost time is never found again. Do it now."},
+    {'type':d, 'body':"Today is difficult, tomorrow is much more difficult, the day after tomorrow is very beautiful, but most die tomorrow evening."}
     ]
