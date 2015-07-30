@@ -37,6 +37,12 @@ class Phone(db.Model):
         else:
             fapp.logger.debug('Phone %s had intro send fail' % self.phone_string)
 
+    def send_growth(self):
+        selection = get_selection(self, message_options.g)
+        message = create_message(self.id, selection=selection)
+        if not message.send(self):
+            fapp.logger.debug('Phone %s had growth send fail.' % self.phone_string)
+
     def send_reintro(self):
         selection = get_selection(self, message_options.r)
         message = create_message(self.id, selection=selection)
@@ -127,7 +133,9 @@ def get_selection(phone, option_type=None):
     """
     def check_selection(option_type, selection_type):
         if option_type == None:
-            return selection_type != message_options.i and selection_type != message_options.r
+            return selection_type != message_options.i and \
+                   selection_type != message_options.r and \
+                   selection_type != message_options.g
         return selection_type == option_type
 
     messages = phone.messages.all() or []

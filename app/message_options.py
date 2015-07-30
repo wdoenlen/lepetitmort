@@ -3,11 +3,12 @@ Options for Messages. Each one looks like:
 {type:<'death'|'life'|...>, body:'The world is a teapot and you are the tea.'}
 """
 
-ty_enum = {'death':0, 'hope':1, 'intro':2, 'reintro':3}
+ty_enum = {'death':0, 'hope':1, 'intro':2, 'reintro':3, 'growth':4}
 d = ty_enum.get('death')
 h = ty_enum.get('hope')
 i = ty_enum.get('intro')
 r = ty_enum.get('reintro')
+g = ty_enum.get('growth')
 
 options = [
     {'type':i, 'body':"Hi, we're so glad to send you hints of hope. You'll receive them every one to two weeks, and if you decide you no longer need hope, reply HOPE to this number."},
@@ -64,5 +65,6 @@ options = [
     {'type':h, 'body':"I do not wish to say that one should love death; but one should love life so magnanimously, so without calculating and selecting, that love of death is continually and involuntarily included."},
     {'type':h, 'body':"You will be a happy moment in someone's life."},
     {'type':d, 'body':"Lost time is never found again. Do it now."},
-    {'type':d, 'body':"Today is difficult, tomorrow is much more difficult, the day after tomorrow is very beautiful, but most die tomorrow evening."}
+    {'type':d, 'body':"Today is difficult, tomorrow is much more difficult, the day after tomorrow is very beautiful, but most die tomorrow evening."},
+    {'type':g, 'body':'Help your friends and loved ones by sending them a Hint of Hope @ hintofhope.today!\n(or reply to this message with their phone number)'},
     ]
